@@ -1,0 +1,2 @@
+include ':app', ':shortvideo_lib'
+rootProject.name='ItTech'
