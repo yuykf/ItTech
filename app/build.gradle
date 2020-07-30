@@ -3,31 +3,55 @@ apply plugin: 'org.greenrobot.greendao'
 
 android {
 
+    signingConfigs {
+        xiaokebang {
+            storeFile file('D:\\Android\\AndroidStudioworkspace\\Othersworkspace\\Projects\\CompanyProjects\\ItTech\\app\\xiaokebang.jks')
+            storePassword 'fungoxiaokebang'
+            keyPassword 'fungoxiaokebang'
+            keyAlias = 'xiaokebang'
+        }
+    }
+
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId "cn.fungo.ittech"
+        applicationId "com.fungo.xiaokebang"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         ndk {
             //目前已支持 "armeabi-v7a","arm64-v8a","x86","x86_64" 平台架构
-            abiFilters "armeabi-v7a","arm64-v8a","x86","x86_64"
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
         }
     }
 
 
     buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
         }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -36,11 +60,11 @@ android {
 
 }
 
-//greendao {
-//    schemaVersion 1
-//    targetGenDir 'src/main/java'
-//    daoPackage 'json.chao.com.wanandroid.core.dao'
-//}
+greendao {
+    schemaVersion 1
+    targetGenDir 'src/main/java'
+    daoPackage 'com.fungo.xiaokebang.core.dao'
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -56,7 +80,7 @@ dependencies {
     implementation rootProject.ext.dependencies["design"]
     implementation rootProject.ext.dependencies["constraint-layout"]
 
-   //ui
+    //ui
     implementation rootProject.ext.dependencies["SmartRefreshLayout"]
     implementation rootProject.ext.dependencies["SmartRefreshHeader"]
     implementation rootProject.ext.dependencies["banner"]
@@ -98,20 +122,69 @@ dependencies {
     implementation rootProject.ext.dependencies["fragmentation"]
     implementation rootProject.ext.dependencies["fragmentation-swipeback"]
     implementation rootProject.ext.dependencies["logger"]
+    implementation rootProject.ext.dependencies["stetho"]
+    implementation rootProject.ext.dependencies["stetho-okhttp3"]
+    implementation rootProject.ext.dependencies["PersistentCookieJar"]
+    implementation rootProject.ext.dependencies["ByeBurger"]
 
     //dao
     implementation rootProject.ext.dependencies["greendao"]
 
     //aliyunvideo
-    implementation 'com.aliyun.video.android:svideosnap:3.16.0'//短视频基础版SDK必须依赖
+    implementation 'com.aliyun.video.android:svideosnap:3.16.1'//短视频基础版SDK必须依赖
     implementation 'com.aliyun.video.android:core:1.2.2' //核心库必须依赖
-    implementation  'com.alivc.conan:AlivcConan:1.0.3'//核心库必须依赖
-    implementation  'com.aliyun.video.android:AlivcFFmpeg:2.0.0'
-    implementation project(path: ':shortvideo_lib')//必须依赖
-//    implementation  'com.aliyun.video.android:upload:1.6.0'// 上传库,如不需要上传可不依赖
+    implementation 'com.alivc.conan:AlivcConan:1.0.3'//核心库必须依赖
+    implementation 'com.aliyun.video.android:AlivcFFmpeg:2.0.0'
+    implementation 'com.aliyun.video.android:upload:1.6.0'// 上传库,如不需要上传可不依赖
 
-    //完整版
-    implementation 'com.github.microshow:RxFFmpeg:4.3.0'
+
+    //相册选择
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation project(path: ':matisselib')  //需要加pisco
+
+    //切图
+    implementation 'com.github.yalantis:ucrop:2.2.5-native'
+
+
+    //视频合成
+    implementation 'com.arthenica:mobile-ffmpeg-full:4.3.2'
+
+    //友盟推送
+    //基础组件库依赖(必须) Push 6.1.0版本必须升级新版本Common SDK
+    implementation 'com.umeng.umsdk:common:9.1.0'
+    implementation 'com.umeng.umsdk:utdid:1.5.2'
+    implementation 'com.umeng.umsdk:asms:1.1.3'
+    implementation 'com.umeng.umsdk:crash:0.0.4'
+
+    //友盟push相关依赖(必须)
+    implementation 'com.umeng.umsdk:push:6.1.0'
+
+    implementation 'com.umeng.umsdk:alicloud-httpdns:1.2.5'
+    implementation 'com.umeng.umsdk:alicloud-utils:1.1.5'
+    implementation 'com.umeng.umsdk:alicloud_beacon:1.0.1'
+
+    implementation 'com.umeng.umsdk:agoo-accs:3.3.8.8-open-fix2'
+    implementation 'com.umeng.umsdk:agoo_networksdk:3.5.5'
+    implementation 'com.umeng.umsdk:agoo_tlog:3.0.0.17'
+    implementation 'com.umeng.umsdk:agoo_tnet4android:3.1.14.9'
+
+
+    implementation 'com.umeng.umsdk:huawei-basetb:2.6.3.306'
+    implementation 'com.umeng.umsdk:huawei-pushtb:2.6.3.306'
+    implementation 'com.umeng.umsdk:huawei-umengaccs:1.2.4'
+
+    implementation 'com.umeng.umsdk:meizu-push:3.8.7'
+    implementation 'com.umeng.umsdk:meizu-umengaccs:1.1.1'
+
+    implementation 'com.umeng.umsdk:oppo-push:2.0.2'
+    implementation 'com.umeng.umsdk:oppo-umengaccs:1.0.6'
+
+    implementation 'com.umeng.umsdk:vivo-push:2.3.5'
+    implementation 'com.umeng.umsdk:vivo-umengaccs:1.1.0'
+
+    implementation 'com.umeng.umsdk:xiaomi-push:3.7.0'
+    implementation 'com.umeng.umsdk:xiaomi-umengaccs:1.1.4'
+    implementation 'org.jetbrains:annotations:15.0'
 
 }
 

@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">ItTech</string>
+    <string name="app_name">小课帮</string>
+
+    //通用
+    <string name="http_error">网络异常</string>
+    <string name="unKnown_error">未知错误</string>
+    <string name="knowledge_hierarchy">作品</string>
+    <string name="wx_article">公众号</string>
+    <string name="home_pager">创作</string>
+    <string name="navigation">导航</string>
+    <string name="project">项目</string>
+    <string name="search_tint">发现更多干货</string>
+    <string name="action_search">搜索</string>
+    <string name="history_search">搜索历史</string>
+    <string name="hot_search">热搜</string>
+    <string name="useful_sites">常用网站</string>
+    <string name="navigation_drawer_open">打开侧栏</string>
+    <string name="navigation_drawer_close">关闭侧栏</string>
+    <string name="double_click_exit_tint">再按一次后退键退出GeeksAndroid</string>
+    <string name="ok">是</string>
+    <string name="no">否</string>
+    <string name="reload">重新加载</string>
+    <string name="error_gif">长宽不小于 %1$dpx，且大小不超过 %2$sM。</string>
+
+    <string name="alivc_common_no_camera_permission">没有权限使用摄像头，请开启摄像头权限</string>
+    <string name="alivc_common_no_record_bluetooth_permission">没有权限使用蓝牙，请开启蓝牙权限</string>
+    <string name="alivc_common_no_record_audio_permission">没有权限使用录音，请开启录音权限</string>
+    <string name="alivc_common_no_read_phone_state_permission">没有读取用户数据的权限，请开启该权限</string>
+    <string name="alivc_common_no_write_external_storage_permission">没有文件写权限，请开启该权限</string>
+    <string name="alivc_common_no_read_external_storage_permission">没有文件读权限，请开启该权限</string>
 </resources>

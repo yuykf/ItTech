@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.htcy.matisselib">
+
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+<application>
+<activity android:name=".ui.MatisseActivity"
+    android:theme="@style/MyDialogStyleBottom"/>
+<!--<activity android:name=".ui.AlbumPreviewActivity"/>-->
+<!--<activity android:name=".ui.SelectedPreviewActivity"/>-->
+</application>
+</manifest>
+
+

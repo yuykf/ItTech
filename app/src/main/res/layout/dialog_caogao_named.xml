@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--    <View-->
+    <!--        android:id="@+id/v_up"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/ll_dialog"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread"-->
+    <!--        app:layout_constraintVertical_weight="2" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_dialog_save_ppt"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="草稿命名"
+            android:textColor="#FF353535"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLength="60"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#FFE5E5E5" />
+
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#FF0594FF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/tv_dismiss"-->
+        <!--                android:text="不保存"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:gravity="center"-->
+        <!--                android:textSize="16sp"-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:textColor="#FF0594FF"-->
+        <!--                android:layout_height="wrap_content"/>-->
+
+        <!--            <View-->
+        <!--                android:layout_width="1dp"-->
+        <!--                android:background="##FFE5E5E5"-->
+        <!--                android:layout_height="match_parent"/>-->
+
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/tv_save"-->
+        <!--                android:text="保存"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:gravity="center"-->
+        <!--                android:textSize="16sp"-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:textColor="#FF0594FF"-->
+        <!--                android:layout_height="wrap_content"/>-->
+
+        <!--        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+    <!--    <View-->
+    <!--        android:id="@+id/v_down"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ll_dialog"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintVertical_chainStyle="spread"-->
+    <!--        app:layout_constraintVertical_weight="2" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,2 +1,3 @@
-include ':app', ':shortvideo_lib'
+include ':app'
 rootProject.name='ItTech'
+include ':matisselib'

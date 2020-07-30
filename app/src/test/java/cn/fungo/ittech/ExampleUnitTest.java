@@ -1,4 +1,4 @@
-package cn.fungo.ittech;
+package com.fungo.xiaokebang;
 
 import org.junit.Test;
 

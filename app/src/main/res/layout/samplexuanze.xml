@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_xaunze"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#73C3FF">
+
+
+    <!--上图像-->
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="fitCenter"
+        android:background="@mipmap/img_xuanze_2"
+        app:layout_constraintBottom_toTopOf="@+id/et_title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/v_left"
+        app:layout_constraintRight_toLeftOf="@+id/v_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_et"
+        android:gravity="start|top"
+        android:hint="  请输入问题"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_select_num"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <View
+        android:id="@+id/v_left"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ll_select_num"
+        app:layout_constraintTop_toTopOf="@+id/ll_select_num" />
+
+    <LinearLayout
+        android:id="@+id/ll_select_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toRightOf="@+id/v_left"
+        app:layout_constraintRight_toLeftOf="@+id/v_right">
+
+
+        <!--题文本-->
+        <LinearLayout
+            android:id="@+id/ll_ct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/ll_select_a"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_select_false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:text="A"
+                    android:textColor="#1D9EFF"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:background="@null"
+                    android:hint="请输入选项内容"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_select_b"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_select_false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:text="B"
+                    android:textColor="#1D9EFF"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:background="@null"
+                    android:hint="请输入选项内容"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_select_c"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_select_false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:text="C"
+                    android:textColor="#1D9EFF"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:background="@null"
+                    android:hint="请输入选项内容"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_select_d"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_select_false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:text="D"
+                    android:textColor="#1D9EFF"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:background="@null"
+                    android:hint="请输入选项内容"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!--题图像-->
+        <LinearLayout
+            android:id="@+id/ll_ci"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.fungo.xiaokebang.utils.RoundImageView
+                    android:id="@+id/iv_ci_a"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_xuanze_2"
+                    app:flynn_border_color="@color/white"
+                    app:flynn_border_width="2dp"
+                    app:flynn_leftBottom_corner_radius="4dp"
+                    app:flynn_leftTop_corner_radius="4dp"
+                    app:flynn_rightBottom_corner_radius="4dp"
+                    app:flynn_rightTop_corner_radius="4dp"
+                    app:flynn_select_word="A"
+                    app:flynn_type="round" />
+
+                <com.fungo.xiaokebang.utils.RoundImageView
+                    android:id="@+id/iv_ci_b"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_xuanze_2"
+                    app:flynn_border_color="@color/white"
+                    app:flynn_border_width="2dp"
+                    app:flynn_leftBottom_corner_radius="4dp"
+                    app:flynn_leftTop_corner_radius="4dp"
+                    app:flynn_rightBottom_corner_radius="4dp"
+                    app:flynn_rightTop_corner_radius="4dp"
+                    app:flynn_select_word="B"
+                    app:flynn_type="round" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.fungo.xiaokebang.utils.RoundImageView
+                    android:id="@+id/iv_ci_c"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_xuanze_2"
+                    app:flynn_border_width="2dp"
+                    app:flynn_leftBottom_corner_radius="4dp"
+                    app:flynn_leftTop_corner_radius="4dp"
+                    app:flynn_rightBottom_corner_radius="4dp"
+                    app:flynn_rightTop_corner_radius="4dp"
+                    app:flynn_select_word="C"
+                    app:flynn_type="round" />
+
+                <View
+                    android:id="@+id/v_interval"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <com.fungo.xiaokebang.utils.RoundImageView
+                    android:id="@+id/iv_ci_d"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_xuanze_2"
+                    app:flynn_border_width="2dp"
+                    app:flynn_leftBottom_corner_radius="4dp"
+                    app:flynn_leftTop_corner_radius="4dp"
+                    app:flynn_rightBottom_corner_radius="4dp"
+                    app:flynn_rightTop_corner_radius="4dp"
+                    app:flynn_select_word="D"
+                    app:flynn_type="round" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--判断题-->
+        <LinearLayout
+            android:id="@+id/ll_pd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <EditText
+                android:id="@+id/et_pd_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/panduan_xuanxiang_input1"
+                android:gravity="left|center_vertical"
+                android:hint="  输入文字"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_pd_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/panduan_xuanxiang_input2"
+                android:gravity="left|center_vertical"
+                android:hint="  输入文字"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <!--简答题-->
+        <LinearLayout
+            android:id="@+id/ll_jd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/iv_jiada"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@mipmap/img_xuanze_2"
+                android:scaleType="fitCenter" />
+
+            <EditText
+                android:id="@+id/et_jd_c1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/et_jd_c2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+        </LinearLayout>
+
+        <!--语言题-->
+        <LinearLayout
+            android:id="@+id/ll_voice"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_voice"
+                android:src="@mipmap/voice" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_right"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/ll_select_num"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ll_select_num" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

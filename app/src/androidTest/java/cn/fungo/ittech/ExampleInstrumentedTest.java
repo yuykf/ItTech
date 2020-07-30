@@ -1,4 +1,4 @@
-package cn.fungo.ittech;
+package com.fungo.xiaokebang;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("cn.fungo.ittech", appContext.getPackageName());
+        assertEquals("com.fungo.xiaokebang", appContext.getPackageName());
     }
 }

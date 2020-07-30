@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <SurfaceView
+        android:id="@+id/aliyun_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <VideoView
+        android:id="@+id/pre_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_novideo_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_iv_novideo"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_no_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/bg_ll_no_video"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/pre_video"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pre_video">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/null_edit" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="当前页面未录制视频"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_startluzhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_start_luzhi"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:text="开始录制"
+            android:textColor="#3F6F8F"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_pre_stop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/luzhi_act_pausev"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/pre_video"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@+id/pre_video"
+        app:layout_constraintRight_toRightOf="@+id/pre_video"
+        app:layout_constraintTop_toTopOf="@+id/pre_video" />
+
+
+    <LinearLayout
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_btn_continue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/pre_video"
+        app:layout_constraintRight_toRightOf="@+id/pre_video">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="继续录制"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/right" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_controll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="00:21" />
+
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="31dp"
+        android:background="@mipmap/luzhi_act_qingkong"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_controll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_controll"
+        app:layout_constraintTop_toTopOf="@id/btn_controll" />
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_dot"-->
+    <!--        android:layout_width="5dp"-->
+    <!--        android:layout_height="5dp"-->
+    <!--        android:background="@color/yellow"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/tv_time"-->
+    <!--        app:layout_constraintRight_toLeftOf="@+id/tv_time"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tv_time" />-->
+
+    <Button
+        android:id="@+id/btn_controll"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@mipmap/luzhi_act_pause"
+        app:layout_constraintBottom_toBottomOf="@+id/aliyun_preview"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_voice"-->
+    <!--        android:layout_width="42dp"-->
+    <!--        android:layout_height="42dp"-->
+    <!--        android:background="@mipmap/luzhi_act_audio"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/btn_video"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/btn_video"-->
+    <!--        app:layout_constraintRight_toLeftOf="@+id/btn_controll" />-->
+
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginRight="31dp"
+        android:background="@mipmap/luzhi_act_submit"
+        app:layout_constraintBaseline_toBaselineOf="@id/btn_controll"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_controll"
+        app:layout_constraintLeft_toRightOf="@+id/btn_controll"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_controll" />
+
+    <Button
+        android:id="@+id/tv_reback_luzhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_start_luzhi"
+        android:gravity="bottom"
+        android:paddingLeft="20dp"
+        android:visibility="gone"
+        android:paddingTop="15dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp"
+        android:text="恢复录制"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/yellow"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pre_video"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_commit"-->
+    <!--        android:layout_width="46dp"-->
+    <!--        android:layout_height="46dp"-->
+    <!--        android:layout_marginRight="32dp"-->
+    <!--        android:background="@mipmap/luzhi_act_submit"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/btn_delete"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/btn_delete" />-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pre"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/aliyun_preview"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <ImageView
+        android:id="@+id/iv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:background="@mipmap/ic_launcher"
+        android:scaleType="fitXY"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_pre" />
+
+    <VideoView
+        android:id="@+id/ppt_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_pre" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

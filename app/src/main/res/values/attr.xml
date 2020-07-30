@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ClcikImageView" >
+        <attr name="isClicked" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundImageView">
+        <!-- 描边宽度-->
+        <attr name="flynn_border_width" format="dimension" />
+        <!-- 描边颜色-->
+        <attr name="flynn_border_color" format="color" />
+        <!--圆角大小-->
+        <attr name="flynn_corner_radius" format="dimension" />
+        <!--左上圆角大小-->
+        <attr name="flynn_leftTop_corner_radius" format="dimension" />
+        <!--右上圆角大小-->
+        <attr name="flynn_rightTop_corner_radius" format="dimension" />
+        <!--左下圆角大小-->
+        <attr name="flynn_leftBottom_corner_radius" format="dimension" />
+        <!--右下圆角大小-->
+        <attr name="flynn_rightBottom_corner_radius" format="dimension" />
+        <!--字母-->
+        <attr name="flynn_select_word" format="string" />
+        <!--图片类型：圆角或者圆形-->
+        <attr name="flynn_type" format="enum">
+            <enum name="oval" value="2" />
+            <enum name="round" value="1" />
+            <enum name="circle" value="0" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="labelImageView">
+        <!--<attr name="text_color" format="color" />-->
+        <!--<attr name="text_content" format="string" />-->
+        <!--<attr name="image_src" format="reference" />-->
+        <!--<attr name="image_width" format="dimension" />-->
+        <!--<attr name="image_height" format="dimension" />-->
+        <!--<attr name="text_size" format="integer" />-->
+        <!--<attr name="text_location" format="string" />-->
+        <!--目前只需要图片水印-->
+        <attr name="show_label" format="boolean" />
+        <attr name="label_src" format="reference" />
+    </declare-styleable>
+
+</resources>

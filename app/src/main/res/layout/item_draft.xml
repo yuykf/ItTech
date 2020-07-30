@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dp_20"
+    android:layout_marginLeft="5dp"
+    android:background="@color/white"
+    android:layout_marginRight="5dp"
+    android:layout_height="80dp">
+
+
+    <ImageView
+        android:id="@+id/iv_his"
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:scaleType="fitXY"
+        android:background="@mipmap/img_xuanze_2"
+        android:layout_height="match_parent"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ll_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintLeft_toRightOf="@+id/iv_his"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_his_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:text="ssssss"
+            android:textColor="#FF313233"
+            android:textSize="14sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintRight_toLeftOf="@+id/iv_his_c"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_his_c"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.484" />
+
+        <TextView
+            android:id="@+id/tv_his_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:gravity="center_vertical"
+            android:textColor="#FF949799"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_his_title"
+            app:layout_constraintRight_toRightOf="@+id/tv_his_title"
+            app:layout_constraintTop_toBottomOf="@+id/iv_his_c"
+            tools:text="ssssssss" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
